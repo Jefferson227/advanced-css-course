@@ -14,12 +14,38 @@ Dark green: #28b485
 }
 
 body {
-  font-family: "Nato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
   margin: 30px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  display: block;
+}
+
+.heading-primary-sub {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  display: block;
 }
 
 .logo-box {
