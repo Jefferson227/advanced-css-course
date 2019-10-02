@@ -39,6 +39,8 @@ body {
   font-weight: 400;
   letter-spacing: 35px;
   display: block;
+  animation: moveInRight 1s;
+  backface-visibility: hidden;
 }
 
 .heading-primary-sub {
@@ -46,6 +48,8 @@ body {
   font-weight: 400;
   letter-spacing: 17.4px;
   display: block;
+  animation: moveInLeft 1s;
+  backface-visibility: hidden;
 }
 
 .logo-box {
@@ -70,4 +74,36 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
