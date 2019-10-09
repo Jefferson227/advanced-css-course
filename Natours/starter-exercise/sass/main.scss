@@ -138,6 +138,11 @@ body {
   &:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
   }
 
   &:active {
@@ -148,6 +153,10 @@ body {
   &--white {
     background-color: $color-white;
     color: $color-gray;
+
+    &::after {
+      background-color: $color-white;
+    }
   }
 
   &::after {
@@ -162,16 +171,7 @@ body {
     z-index: -1;
   }
 
-  &--white::after {
-    background-color: $color-white;
-  }
-
   &--animated::after {
     transition: all 0.3s;
-  }
-
-  &:hover::after {
-    transform: scale(1.5);
-    opacity: 0;
   }
 }

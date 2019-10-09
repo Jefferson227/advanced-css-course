@@ -96,6 +96,9 @@ body {
 .btn:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.3rem);
@@ -104,6 +107,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -116,12 +121,5 @@ body {
   left: 0;
   z-index: -1; }
 
-.btn--white::after {
-  background-color: #fff; }
-
 .btn--animated::after {
   transition: all 0.3s; }
-
-.btn:hover::after {
-  transform: scale(1.5);
-  opacity: 0; }
