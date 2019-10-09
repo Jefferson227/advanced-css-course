@@ -123,6 +123,18 @@ body {
   }
 }
 
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .btn {
   &:link,
   &:visited {
@@ -169,9 +181,11 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    transition: all 0.3s;
   }
 
-  &--animated::after {
-    transition: all 0.3s;
+  &--animated {
+    animation: moveInUp 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
   }
 }

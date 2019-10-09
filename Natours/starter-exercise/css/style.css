@@ -84,6 +84,14 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -119,7 +127,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
-
-.btn--animated::after {
+  z-index: -1;
   transition: all 0.3s; }
+
+.btn--animated {
+  animation: moveInUp 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
