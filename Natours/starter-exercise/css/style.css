@@ -167,6 +167,8 @@ body {
   width: calc( (3 * (114rem - (3 * 6rem)) / 4) + (2 * 6rem)); }
 
 .btn, .btn:link, .btn:visited {
+  font-family: inherit;
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
