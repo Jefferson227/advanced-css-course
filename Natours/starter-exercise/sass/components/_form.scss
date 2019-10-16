@@ -49,17 +49,40 @@
     opacity: 0;
   }
 
-  &__group-radio {
-    width: 90%;
-    display: block;
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
   }
 
-  &__radio {
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
     position: relative;
-    display: inline-block;
+    padding-left: 4.5rem;
+  }
 
-    &:not(:last-child) {
-      margin-right: 10rem;
+  &__radio-button {
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid $color-primary-dark;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary-dark;
+      opacity: 0;
     }
   }
 
@@ -67,42 +90,21 @@
     display: none;
   }
 
-  &__radio-input:checked ~ &__radio-label &__radio-styled::before {
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
   }
 
-  &__radio-label {
-    margin-left: 5rem;
-    cursor: pointer;
-  }
+  // &__radio {
+  //   position: relative;
+  //   display: inline-block;
 
-  &__radio-styled {
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    border: 0.5rem solid $color-primary-dark;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  //   &:not(:last-child) {
+  //     margin-right: 10rem;
+  //   }
+  // }
 
-    &::before {
-      content: "";
-      display: inline-block;
-      background-color: $color-primary-dark;
-      position: absolute;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-  }
-
-  &__button-submit {
-    display: inline-block;
-    transform: translateX(55%);
-  }
+  // &__button-submit {
+  //   display: inline-block;
+  //   transform: translateX(55%);
+  // }
 }
