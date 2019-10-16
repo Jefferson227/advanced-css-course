@@ -166,14 +166,16 @@ body {
 .col-3-of-4 {
   width: calc( (3 * (114rem - (3 * 6rem)) / 4) + (2 * 6rem)); }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   padding: 2rem 4rem;
   border-radius: 10rem;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.5rem);
@@ -182,7 +184,8 @@ body {
     transform: scale(1.5);
     opacity: 0; }
 
-.btn:active {
+.btn:focus, .btn:active {
+  outline: none;
   transform: translateY(-0.3rem);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
@@ -458,11 +461,6 @@ body {
   .form__input::-webkit-input-placeholder {
     color: #999; }
 
-.form__input:placeholder-shown + .form__label {
-  transform: translateY(-3rem);
-  visibility: hidden;
-  opacity: 0; }
-
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -473,6 +471,57 @@ body {
   opacity: 1;
   visibility: visible;
   transition: all 0.2s; }
+
+.form__input:placeholder-shown + .form__label {
+  transform: translateY(-3rem);
+  visibility: hidden;
+  opacity: 0; }
+
+.form__group-radio {
+  width: 90%;
+  display: block; }
+
+.form__radio {
+  position: relative;
+  display: inline-block; }
+  .form__radio:not(:last-child) {
+    margin-right: 10rem; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-styled::before {
+  opacity: 1; }
+
+.form__radio-label {
+  margin-left: 5rem;
+  cursor: pointer; }
+
+.form__radio-styled {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid #28b485;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .form__radio-styled::before {
+    content: "";
+    display: inline-block;
+    background-color: #28b485;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; }
+
+.form__button-submit {
+  display: inline-block;
+  transform: translateX(55%); }
 
 .section-about {
   background-color: #f7f7f7;
