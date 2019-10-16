@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css",
-    "watch:sass": "yarn run compile:sass && yarn run compile:sass -w"
+    "watch:sass": "yarn run compile:sass && yarn run compile:sass -- -w"
   },
   "devDependencies": {
     "node-sass": "^4.12.0"
