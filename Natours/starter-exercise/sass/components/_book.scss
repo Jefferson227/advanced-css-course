@@ -7,12 +7,20 @@
     ),
     url(../../img/nat-10.jpg);
   background-size: cover;
-  height: 50rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9),
+        rgba($color-white, 0.9)
+      ),
+      url(../../img/nat-10.jpg);
+  }
+
   &__form {
-    width: 50%;
+    width: 100%;
     padding: 6rem;
   }
 }
