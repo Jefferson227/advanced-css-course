@@ -179,7 +179,7 @@
   }
 }
 
-@include respond(tab-port) {
+@include respond(tab-land) {
   .card {
     height: auto;
     border-radius: 3px;
