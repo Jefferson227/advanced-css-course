@@ -11,6 +11,10 @@
   @include respond(tab-port) {
     padding: 0 15rem;
   }
+
+  @include respond(phone) {
+    padding: 0 5rem;
+  }
 }
 
 [class^="col-"] {

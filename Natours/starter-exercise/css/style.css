@@ -27,7 +27,7 @@ body {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .heading-primary--main {
-        font-size: 5rem;
+        font-size: 3.5rem;
         letter-spacing: 2rem; } }
   .heading-primary--sub {
     font-size: 2rem;
@@ -38,7 +38,7 @@ body {
     backface-visibility: hidden; }
     @media (max-width: 37.5em) {
       .heading-primary--sub {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         letter-spacing: 0.75rem; } }
 
 .heading-secondary {
@@ -53,6 +53,9 @@ body {
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 3rem; } }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -186,6 +189,9 @@ body {
   @media (max-width: 56.25em) {
     .row {
       padding: 0 15rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      padding: 0 5rem; } }
 
 [class^="col-"] {
   float: left; }
@@ -649,6 +655,10 @@ body {
   padding-left: 9rem;
   transform: skewX(-12deg);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0);
+      width: 100%; } }
   .story__shape {
     float: left;
     width: 15rem;
@@ -659,6 +669,9 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     transform: scale(1.2) translateX(-3.5rem);
@@ -666,6 +679,9 @@ body {
     backface-visibility: hidden; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -866,6 +882,9 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+  @media (max-width: 37.5em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   padding: 15rem 0;
