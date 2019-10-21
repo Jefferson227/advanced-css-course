@@ -18,6 +18,11 @@ body {
     display: block;
     animation: moveInRight 1s;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 2rem;
+    }
   }
 
   &--sub {
@@ -27,6 +32,11 @@ body {
     display: block;
     animation: moveInLeft 1s;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      font-size: 1.7rem;
+      letter-spacing: 0.75rem;
+    }
   }
 }
 

@@ -23,6 +23,10 @@ html {
 }
 
 body {
-  margin: 3rem;
+  padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
