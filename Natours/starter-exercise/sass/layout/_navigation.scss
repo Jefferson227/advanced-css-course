@@ -85,6 +85,14 @@
       );
       background-size: 230%;
       transition: all 0.4s;
+
+      @include respond(tab-land) {
+        background-image: linear-gradient(to right, transparent, transparent);
+      }
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
     }
 
     &:hover,
@@ -92,12 +100,20 @@
       background-position: 100%;
       color: $color-primary-dark;
       transform: translateX(1.5rem);
+
+      @include respond(tab-land) {
+        background-color: $color-white;
+      }
     }
   }
 
   &__number {
     display: inline-block;
     margin-right: 2.5rem;
+
+    @include respond(phone) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__checkbox:checked ~ &__background {
